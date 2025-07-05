@@ -8,10 +8,10 @@ queue.forEach(element => {
 // console.log(level);
 // tuple
 let user :[number, string] = [1, 'mm']
-function render(resposne :any){
-    console.log(resposne);  
-}
-//enum
+// function render(resposne :any){
+//     console.log(resposne);  
+// }
+// //enum
 enum Size{Small =3, Medium, Large};
 let mySize: Size = Size.Large;
 console.log(mySize);
@@ -27,6 +27,7 @@ type Employee = {
     name:string
     retire: (date: Date)=> void
 }
+
 let employee : Employee = {
     id:1,
     name:"",
@@ -58,3 +59,23 @@ type Hight = 150|200;
 let hight :Hight =200
 
 type Metric = 'cm' | 'm'
+
+//Nullish
+let speed: number | null = null
+
+let ride = {
+    speed: speed ?? 30
+}
+
+//Type Assertions
+let phone = <HTMLInputElement> document.getElementById('phone')
+
+phone.value
+//the unknown type
+function render(document: unknown){
+    if(document instanceof WakeLock){
+
+        // document.toLowerCase()
+    }
+
+}
